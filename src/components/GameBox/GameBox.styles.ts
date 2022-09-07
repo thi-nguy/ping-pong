@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { GAME_WIDTH, GAME_HEIGHT } from "../../gameHelper";
 
 const StyledGameBox = styled.div`
-    width: ${GAME_WIDTH}px;
-    height: ${GAME_HEIGHT}px;
+    width: ${GAME_WIDTH}vw;
+    height: ${GAME_HEIGHT}vh;
     background-color: black;
     border-style: double;
     border-color: white;

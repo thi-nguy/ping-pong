@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { PADDLE_WIDTH, PADDLE_HEIGHT, PADDLE_POSITION, GAME_WIDTH } from '../../gameHelper';
+import { PADDLE_WIDTH, PADDLE_HEIGHT, GAME_WIDTH } from '../../gameHelper';
 
 type Props = {
     type: string;
@@ -7,13 +7,14 @@ type Props = {
 }
 
 const StyledPaddle = styled.div<Props>`
-    width: ${PADDLE_WIDTH}px;
-    height: ${PADDLE_HEIGHT}px;
+    width: ${PADDLE_WIDTH}vw;
+    height: ${PADDLE_HEIGHT}vh;
     background-color: white;
     position: absolute;
-    top: ${(Props) => Props.position}px;
+    top: ${(Props) => Props.position}vh;
     transform: translateY(-50%); // to get it to middle
-    left: ${(Props) => Props.type === "left" ? 0 : (GAME_WIDTH - PADDLE_WIDTH)}px;
+    left: ${(Props) => Props.type === "left" ? 0 : GAME_WIDTH - PADDLE_WIDTH}vw;
+
 `;
 
 export default StyledPaddle;
